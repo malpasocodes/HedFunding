@@ -17,6 +17,7 @@ def show():
         submit_button = st.form_submit_button(label='Submit')
 
         if submit_button:
+            
             df_inst = df.nlargest(plot_n, 'Millions$')[['Institution', 'Control', 'Billions$', 'GradRate']]
             
             # Create a scatter plot with Plotly
